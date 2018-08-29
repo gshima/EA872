@@ -128,7 +128,7 @@ void Tela::update() {
   {
     i = (int) ((*corpos_old)[k]->get_posicao()) * \
         (this->maxI / this->maxX);
-    move(i, k);   /* Move cursor to position */
+    if(move(i,k) != ERR)   /* Move cursor to position */
     echochar(' ');  /* Prints character, advances a position */
   }
 
